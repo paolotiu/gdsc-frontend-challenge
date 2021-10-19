@@ -1,17 +1,7 @@
 import { Button, Container as C } from '@mui/material';
 import { styled } from '@mui/system';
-import Header from 'components/Header';
-import Sidebar from 'components/Sidebar';
 import { ReactComponent as SettingsGirl } from 'components/Icons/SettingsGirl.svg';
-import { useState } from 'react';
-
-const Main = styled('main')<{ shouldHaveMargin?: boolean }>(({ shouldHaveMargin }) => ({
-  transition: 'all 225ms cubic-bezier(0, 0, 0.2, 1) 0ms',
-  marginLeft: shouldHaveMargin && '200px',
-  minHeight: '100vh',
-  display: 'flex',
-  flexDirection: 'column',
-}));
+import Layout from 'components/Layout';
 
 const Container = styled(C)`
   display: grid;
@@ -42,32 +32,24 @@ const Container = styled(C)`
 `;
 
 const Dashboard = () => {
-  const [isOpen, setIsOpen] = useState(true);
-
   return (
-    <div>
-      <Main shouldHaveMargin={isOpen}>
-        <Header />
+    <Layout>
+      <Container>
+        <div>
+          <SettingsGirl />
+          <h2>Your dashboard's coming soon 😉</h2>
+          <p>
+            We’re still working on creating a big experience for you and your organization. For now,
+            try adding a past event to your organization’s web page!
+          </p>
+          <div className="btn-container">
+            <Button variant="contained">Create an event</Button>
 
-        <Container>
-          <div>
-            <SettingsGirl />
-            <h2>Your dashboard's coming soon 😉</h2>
-            <p>
-              We’re still working on creating a big experience for you and your organization. For
-              now, try adding a past event to your organization’s web page!
-            </p>
-            <div className="btn-container">
-              <Button variant="contained">Create an event</Button>
-
-              <Button variant="outlined">View my webpage</Button>
-            </div>
+            <Button variant="outlined">View my webpage</Button>
           </div>
-        </Container>
-      </Main>
-
-      <Sidebar isOpen={isOpen} />
-    </div>
+        </div>
+      </Container>
+    </Layout>
   );
 };
 

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Login from 'pages/Login';
-
+import Event from 'pages/Event';
 import './App.css';
 import Dashboard from 'pages/Dashboard';
 
@@ -14,6 +14,10 @@ function App() {
 
         <Route path="/dashboard" exact>
           <Dashboard />
+        </Route>
+
+        <Route path="/events" exact>
+          <Event />
         </Route>
 
         <Route path="/">
