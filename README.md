@@ -2,6 +2,8 @@
 
 [Live Site](https://gdsc-f.netlify.app/)
 
+Enter any valid email and any password to login.
+
 ## Made for the Pavillon project department frontend challenge
 
 Made using:
