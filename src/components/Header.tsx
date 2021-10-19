@@ -46,8 +46,12 @@ const Header = ({ onMenuClick }: Props) => {
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const logOut = () => {
     history.push('/login');
   };
+
   const open = Boolean(anchorEl);
   return (
     <Container>
@@ -88,7 +92,14 @@ const Header = ({ onMenuClick }: Props) => {
               horizontal: 'left',
             }}
           >
-            <MenuItem onClick={handleClose}>Log Out</MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                logOut();
+              }}
+            >
+              Log Out
+            </MenuItem>
           </StyledMenu>
         </Grid>
       </Grid>
