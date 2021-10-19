@@ -15,6 +15,11 @@ const Container = styled(Drawer)(({ theme }) => ({
     '& .logo': {
       padding: '3rem 2rem',
     },
+    '& .sidebar-links': {
+      paddingTop: '3rem',
+      display: 'flex',
+      flexDirection: 'column',
+    },
   },
 }));
 
@@ -66,10 +71,11 @@ const Sidebar = ({ isOpen }: Props) => {
           />
         </svg>
       </div>
-
-      <SidebarLink href="/dashboard" label="Dashboard" />
-      <SidebarLink href="/events" label="Events" />
-      <SidebarLink href="/settings" label="Settings" />
+      <div className="sidebar-links">
+        <SidebarLink href="/dashboard" label="Dashboard" />
+        <SidebarLink href="/events" label="Events" />
+        <SidebarLink href="/settings" label="Settings" />
+      </div>
     </Container>
   );
 };

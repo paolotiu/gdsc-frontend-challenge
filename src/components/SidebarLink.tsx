@@ -14,6 +14,10 @@ const StyledNavLink = styled(NavLink)`
   padding: 1.6rem 2rem;
   text-decoration: none;
   color: #fff;
+  transition: all 200ms ease-in;
+  :hover {
+    background-color: #1a73e840;
+  }
 `;
 
 const SidebarLink = ({ label, href }: Props) => {
