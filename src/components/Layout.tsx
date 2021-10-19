@@ -15,7 +15,7 @@ const Main = styled('main')<{ shouldHaveMargin?: boolean }>(({ shouldHaveMargin 
 }));
 
 const Layout = ({ children }: Props) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen] = useState(true);
   return (
     <>
       <Main shouldHaveMargin={isOpen}>
