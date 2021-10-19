@@ -14,3 +14,7 @@ code {
 .MuiButton-root.MuiButton-contained {
   background: linear-gradient(270deg, #1a73e8 0%, #498af4 100%);
 }
+
+.MuiButton-root.MuiButtonBase-root {
+  text-transform: unset;
+}

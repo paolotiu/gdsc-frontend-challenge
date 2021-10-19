@@ -6,6 +6,7 @@ specifiers:
   '@mui/icons-material': ^5.0.4
   '@mui/material': ^5.0.4
   '@mui/system': ^5.0.4
+  '@svgr/webpack': ^5.5.0
   '@testing-library/jest-dom': ^5.11.4
   '@testing-library/react': ^11.1.0
   '@testing-library/user-event': ^12.1.10
@@ -28,6 +29,7 @@ dependencies:
   '@mui/icons-material': 5.0.4_e9b24d4362a2635d8603662f0ffe60af
   '@mui/material': 5.0.4_514b911bf899363031b909b61e54fecc
   '@mui/system': 5.0.4_4e6bfbdb9bf478a2385cfdf20c0424ec
+  '@svgr/webpack': 5.5.0
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 12.8.3
@@ -89,7 +91,7 @@ packages:
       gensync: 1.0.0-beta.2
       json5: 2.2.0
       lodash: 4.17.21
-      resolve: 1.18.1
+      resolve: 1.20.0
       semver: 5.7.1
       source-map: 0.5.7
     transitivePeerDependencies:
