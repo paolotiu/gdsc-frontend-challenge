@@ -7,6 +7,8 @@ import Sidebar from './Sidebar';
 interface Props {
   children: React.ReactNode;
 }
+// This fails on when building in vercel/netlify kinda weird
+// @ts-ignore
 const Main = styled('main')<{ shouldHaveMargin?: boolean }>(({ shouldHaveMargin }) => ({
   transition: 'all 225ms cubic-bezier(0, 0, 0.2, 1) 0ms',
   marginLeft: shouldHaveMargin && '200px',
