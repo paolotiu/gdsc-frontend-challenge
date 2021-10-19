@@ -1,5 +1,5 @@
-import { Box } from '.pnpm/@mui+system@5.0.4_4e6bfbdb9bf478a2385cfdf20c0424ec/node_modules/@mui/system';
-import { Button, Card, CardContent, FormControl, styled, TextField } from '@mui/material';
+import { Box, Button, Card, CardContent, FormControl, TextField } from '@mui/material';
+import { styled } from '@mui/material';
 import { getBlankObject, transformErrorMessages } from 'lib/formHelpers';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
