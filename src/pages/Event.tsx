@@ -1,12 +1,12 @@
 import { Button } from '@mui/material';
-import { styled } from '@mui/system';
+import { maxWidth, styled } from '@mui/system';
 import Layout from 'components/Layout';
 import SearchBar from 'components/SearchBar';
 import { ReactComponent as BlankCanvas } from 'components/Icons/BlankCanvas.svg';
 const Container = styled('div')`
   display: flex;
   flex-direction: column;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   flex: 1;
 
   .title {
@@ -17,10 +17,16 @@ const Container = styled('div')`
     margin-top: 2.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-end;
+    gap: 2rem;
     button {
       padding: 0.625rem 2rem;
       font-size: 14px;
+    }
+    @media screen and (max-width: 728px) {
+      .create {
+        display: none;
+      }
     }
   }
 
@@ -54,10 +60,12 @@ const Event = () => {
         <h1 className="title">Events</h1>
         <div className="actions">
           <SearchBar />
-          <Button variant="contained">Create an event</Button>
+          <Button className="create" variant="contained">
+            Create an event
+          </Button>
         </div>
         <div className="empty">
-          <BlankCanvas />
+          <BlankCanvas style={{ maxWidth: '60vw' }} />
           <h4>You don't have an event yet!</h4>
 
           <Button variant="contained">Create an event</Button>

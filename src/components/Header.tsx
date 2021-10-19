@@ -1,9 +1,8 @@
 import { Avatar as A, Grid, styled, Menu, MenuItem, Button } from '@mui/material';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-
-interface Props {}
 
 const Container = styled('div')`
   border-bottom: 1px solid #d1d5db;
@@ -28,7 +27,17 @@ const AvatarContainer = styled(Button)`
 
 const Avatar = styled(A)();
 
-const Header = (props: Props) => {
+const Hamburger = styled('span')`
+  cursor: pointer;
+  @media screen and (min-width: 728px) {
+    display: none;
+  }
+`;
+
+interface Props {
+  onMenuClick: () => void;
+}
+const Header = ({ onMenuClick }: Props) => {
   const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
   const history = useHistory();
 
@@ -44,10 +53,15 @@ const Header = (props: Props) => {
     <Container>
       <Grid
         container
-        direction="row-reverse"
+        justifyContent="space-between"
         alignItems="center"
-        sx={{ height: '100%', padding: '0 3rem' }}
+        sx={{ height: '100%', padding: '0 1rem' }}
       >
+        <Grid item>
+          <Hamburger onClick={onMenuClick}>
+            <MenuIcon />
+          </Hamburger>
+        </Grid>
         <Grid item>
           <AvatarContainer
             onClick={handleClick}

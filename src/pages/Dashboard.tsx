@@ -8,6 +8,7 @@ const Container = styled(C)`
   place-items: center;
   height: 100%;
   flex: 1;
+  padding: 3rem 1rem;
   div {
     margin: auto;
     padding-bottom: 2rem;

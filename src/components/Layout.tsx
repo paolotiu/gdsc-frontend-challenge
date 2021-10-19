@@ -1,5 +1,6 @@
+import { useMediaQuery } from '@mui/material';
 import { styled } from '@mui/system';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 
@@ -15,15 +16,25 @@ const Main = styled('main')<{ shouldHaveMargin?: boolean }>(({ shouldHaveMargin 
 }));
 
 const Layout = ({ children }: Props) => {
-  const [isOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
+
+  const matches = useMediaQuery('(min-width:728px)');
+
+  useEffect(() => {
+    if (!matches) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  }, [matches]);
   return (
     <>
-      <Main shouldHaveMargin={isOpen}>
-        <Header />
+      <Main shouldHaveMargin={matches && isOpen}>
+        <Header onMenuClick={() => setIsOpen((p) => !p)} />
         {children}
       </Main>
 
-      <Sidebar isOpen={isOpen} />
+      <Sidebar isOpen={isOpen} closeSidebar={() => setIsOpen(false)} />
     </>
   );
 };
