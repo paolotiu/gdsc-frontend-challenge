@@ -18,6 +18,8 @@ specifiers:
   react-scripts: 4.0.3
   typescript: ^4.4.4
   web-vitals: ^1.0.1
+  yup: ^0.32.11
+  zod: ^3.10.1
 
 dependencies:
   '@emotion/react': 11.5.0_0d9ae6029f9b6856f7d6fb45bd27ecc7
@@ -36,6 +38,8 @@ dependencies:
   react-scripts: 4.0.3_react@17.0.2+typescript@4.4.4
   typescript: 4.4.4
   web-vitals: 1.1.2
+  yup: 0.32.11
+  zod: 3.10.1
 
 devDependencies:
   '@types/react-router-dom': 5.3.1
@@ -2487,6 +2491,10 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
+    dev: false
+
+  /@types/lodash/4.14.175:
+    resolution: {integrity: sha512-XmdEOrKQ8a1Y/yxQFOMbC47G/V2VDO1GvMRnl4O75M4GW/abC5tnfzadQYkqEveqRM1dEJGFFegfPNA2vvx2iw==}
     dev: false
 
   /@types/minimatch/3.0.5:
@@ -7772,6 +7780,10 @@ packages:
       p-locate: 4.1.0
     dev: false
 
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
   /lodash._reinterpolate/3.0.0:
     resolution: {integrity: sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=}
     dev: false
@@ -8179,6 +8191,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /nanoclone/0.2.1:
+    resolution: {integrity: sha512-wynEP02LmIbLpcYw8uBKpcfF6dmg2vcpKqxeH5UcoKEYdExslsdUA4ugFauuaeYdTB76ez6gJW8XAZ6CgkXYxA==}
+    dev: false
 
   /nanoid/3.1.30:
     resolution: {integrity: sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==}
@@ -9613,6 +9629,10 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
+    dev: false
+
+  /property-expr/2.0.4:
+    resolution: {integrity: sha512-sFPkHQjVKheDNnPvotjQmm3KD3uk1fWKUN7CrpdbwmUx3CrG3QiM8QpTSimvig5vTXmTvjz7+TDvXOI9+4rkcg==}
     dev: false
 
   /proxy-addr/2.0.7:
@@ -11331,6 +11351,10 @@ packages:
     engines: {node: '>=0.6'}
     dev: false
 
+  /toposort/2.0.2:
+    resolution: {integrity: sha1-riF2gXXRVZ1IvvNUILL0li8JwzA=}
+    dev: false
+
   /tough-cookie/4.0.0:
     resolution: {integrity: sha512-tHdtEpQCMrc1YLrMaqXXcj6AxhYi/xgit6mZu1+EDWUn+qhUf8wMQoFIy9NXuq23zAwtcB0t/MjACGR18pcRbg==}
     engines: {node: '>=6'}
@@ -12251,4 +12275,21 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /yup/0.32.11:
+    resolution: {integrity: sha512-Z2Fe1bn+eLstG8DRR6FTavGD+MeAwyfmouhHsIUgaADz8jvFKbO/fXc2trJKZg+5EBjh4gGm3iU/t3onKlXHIg==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@babel/runtime': 7.15.4
+      '@types/lodash': 4.14.175
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      nanoclone: 0.2.1
+      property-expr: 2.0.4
+      toposort: 2.0.2
+    dev: false
+
+  /zod/3.10.1:
+    resolution: {integrity: sha512-ZnIzDr3vhppKW7yTAlvUQ7QJir5yoL14DgZ6DjYNb4/D4DxFdZeysF6Q5hAahU7KXtaiTgYkGO/qiAD83YN3ig==}
     dev: false
