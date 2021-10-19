@@ -17,7 +17,7 @@ const Settings = () => {
     <Layout>
       <Container>
         <div>
-          <img src="/tools.png" width="25%" />
+          <img src="/tools.png" width="25%" alt="tools" />
           <h2>Hi :)</h2>
         </div>
       </Container>

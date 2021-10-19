@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import { maxWidth, styled } from '@mui/system';
+import { styled } from '@mui/system';
 import Layout from 'components/Layout';
 import SearchBar from 'components/SearchBar';
 import { ReactComponent as BlankCanvas } from 'components/Icons/BlankCanvas.svg';
